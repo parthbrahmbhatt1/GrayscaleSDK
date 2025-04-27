@@ -20,6 +20,12 @@ App Design & Architecture:
  5. Choose a simulator or device.
  6. Build using **Product > Build** or `Cmd + B`.
 
+## Future Improvemnts
+  1. Batch processing of multiple images
+  2. Support for different grayscale algorithms
+  3. Benchmarking and optimization of image conversion
+  4. CI/CD integration using GitHub Actions or Xcode Cloud
+
 ## Testing
 
 ### Unit Tests
@@ -37,9 +43,3 @@ Use the `build_and_test.sh` script to automate build & test:
 ```bash
 chmod +x build_and_test.sh
 ./build_and_test.sh
-
-## Future Improvemnts
-  1. Batch processing of multiple images
-  2. Support for different grayscale algorithms
-  3. Benchmarking and optimization of image conversion
-  4. CI/CD integration using GitHub Actions or Xcode Cloud
