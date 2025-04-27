@@ -54,5 +54,22 @@ final class GrayscaleSDKTests: XCTestCase {
         let grayImage = GrayscaleImageConverter.convertToGrayscale(image: image)
         XCTAssertNotNil(grayImage)
     }
-
+    
+    //  Test Very Small Image
+    
+    func testConvertSmallImageToGrayscale() {
+        let smallImage = createImageWithColor(color: .red, size: CGSize(width: 1, height: 1))
+        let grayImage = GrayscaleImageConverter.convertToGrayscale(image: smallImage)
+        XCTAssertNotNil(grayImage)
+    }
+    
+    //  Test Performance on Larger Image
+    
+    func testPerformanceOfGrayscaleConversion() {
+        let largeImage = createImageWithColor(color: .blue, size: CGSize(width: 1000, height: 1000))
+        
+        measure {
+            _ = GrayscaleImageConverter.convertToGrayscale(image: largeImage)
+        }
+    }
 }
