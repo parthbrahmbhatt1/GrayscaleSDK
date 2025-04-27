@@ -19,11 +19,12 @@ SDK Design & Architecture:
 
 ### SDK
 
-1. Install CocoaPods. Go to your project directory and run pod install command in Terminal 
-1. Open `GrayscaleSDK.xcworkspace` in Xcode.
-2. Select the `GrayscaleSDK` scheme.
-3. Choose a simulator or device.
-4. Build using **Product > Build** or `Cmd + B`.
+1. Install CocoaPods. Go to your project directory and run pod install command in Terminal.
+2. Make sure to add Pods framewok under Frameworks, Library and Embedded Content. 
+3. Open `GrayscaleSDK.xcworkspace` in Xcode.
+4. Select the `GrayscaleSDK` scheme.
+5. Choose a simulator or device.
+6. Build using **Product > Build** or `Cmd + B`.
 
 ## Testing
 
