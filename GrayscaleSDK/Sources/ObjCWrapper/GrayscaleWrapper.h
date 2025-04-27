@@ -7,10 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface GrayscaleWrapper : NSObject
 
-@end
++ (NSData *)convertToGrayscaleWithRGBAData:(NSData *)rgbaData width:(int)width height:(int)height;
 
-NS_ASSUME_NONNULL_END
+@end
