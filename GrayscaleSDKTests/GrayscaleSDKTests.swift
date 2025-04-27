@@ -32,5 +32,27 @@ final class GrayscaleSDKTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    // Test Nil CGImage (Invalid Image)
+    
+    func testConvertImageWithNilCGImageReturnsNil() {
+        let image = UIImage()
+        let grayImage = GrayscaleImageConverter.convertToGrayscale(image: image)
+        XCTAssertNil(grayImage)
+    }
+    
+    // Test Normal Image Conversion
+    
+    func testConvertValidImageToGrayscale() {
+        let bundle = Bundle(for: type(of: self))
+        guard let path = bundle.path(forResource: "test_image", ofType: "jpg"),
+              let image = UIImage(contentsOfFile: path) else {
+            XCTFail("Could not load sample image")
+            return
+        }
+
+        let grayImage = GrayscaleImageConverter.convertToGrayscale(image: image)
+        XCTAssertNotNil(grayImage)
+    }
 
 }
