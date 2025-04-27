@@ -1,0 +1,9 @@
+# Ignore the Pods directory (CocoaPods)
+Pods/
+
+# Ignore build files
+build/
+DerivedData/
+
+# Ignore system files
+.DS_Store
