@@ -72,4 +72,32 @@ final class GrayscaleSDKTests: XCTestCase {
             _ = GrayscaleImageConverter.convertToGrayscale(image: largeImage)
         }
     }
+    
+    // Test Resulting Image Size Matches Original
+    
+    func testGrayscaleImageHasSameSizeAsOriginal() {
+        let originalImage = createImageWithColor(color: .green, size: CGSize(width: 50, height: 100))
+        let grayImage = GrayscaleImageConverter.convertToGrayscale(image: originalImage)
+        
+        XCTAssertEqual(grayImage?.size, originalImage.size)
+    }
+    
+    // Test Image Contents Become Grayscale
+    
+    func testImageContentIsGrayscale() {
+        let redImage = createImageWithColor(color: .red, size: CGSize(width: 10, height: 10))
+        guard let grayImage = GrayscaleImageConverter.convertToGrayscale(image: redImage),
+              let cgImage = grayImage.cgImage,
+              let dataProvider = cgImage.dataProvider,
+              let pixelData = dataProvider.data else {
+            XCTFail("Conversion failed or pixel data missing")
+            return
+        }
+        
+        let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
+        for i in 0..<cgImage.width * cgImage.height {
+            let pixelValue = data[i]
+            XCTAssertEqual(pixelValue, data[0], "All grayscale pixels should be the same for solid color image")
+        }
+    }
 }
