@@ -6,7 +6,7 @@ SDK Design & Architecture:
 
 - **Language Interop**: 
   - The SDK uses a combination of Swift, Objective-C++, and C++ (with OpenCV) for image processing.
-  - Swift handles the public API, Objective-C++ acts as a bridge, and C++ performs the grayscale conversion.
+  - Swift handles the public API, and C++ performs the grayscale conversion.
 
 - **MVVM Pattern**:
   - The sample app is structured using MVVM for clarity and separation of concerns.
