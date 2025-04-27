@@ -1,4 +1,4 @@
-GrayscaleSDK:
+**GrayscaleSDK**: 
 
 GrayscaleSDK is a lightweight, modular iOS SDK written in Swift and C++ using OpenCV, designed to convert color images to grayscale. It can be integrated into any iOS app and includes a SwiftUI-based sample app.
 
@@ -14,3 +14,13 @@ SDK Design & Architecture:
 
 - **Thread Safety**:
   - Image processing is performed on the main thread only after proper validation to avoid memory crashes.
+ 
+  - ## Build & Run Instructions
+
+### SDK
+
+1. Install CocoaPods. Go to your project directory and run pod install command in Terminal 
+1. Open `GrayscaleSDK.xcworkspace` in Xcode.
+2. Select the `GrayscaleSDK` scheme.
+3. Choose a simulator or device.
+4. Build using **Product > Build** or `Cmd + B`.
