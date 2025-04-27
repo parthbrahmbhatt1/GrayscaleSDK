@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GrayscaleSDK/GrayscaleWrapper.h>
 
 //! Project version number for GrayscaleSDK.
 FOUNDATION_EXPORT double GrayscaleSDKVersionNumber;
