@@ -15,7 +15,7 @@ SDK Design & Architecture:
 - **Thread Safety**:
   - Image processing is performed on the main thread only after proper validation to avoid memory crashes.
  
-  - ## Build & Run Instructions
+## Build & Run Instructions
 
 ### SDK
 
