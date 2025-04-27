@@ -8,10 +8,6 @@ SDK Design & Architecture:
   - The SDK uses a combination of Swift, Objective-C++, and C++ (with OpenCV) for image processing.
   - Swift handles the public API, and C++ performs the grayscale conversion.
 
-- **MVVM Pattern**:
-  - The sample app is structured using MVVM for clarity and separation of concerns.
-  - `ProcessedImage` is a lightweight model holding original and grayscale images.
-
 - **Thread Safety**:
   - Image processing is performed on the main thread only after proper validation to avoid memory crashes.
  
