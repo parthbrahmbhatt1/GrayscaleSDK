@@ -20,7 +20,7 @@ App Design & Architecture:
  5. Choose a simulator or device.
  6. Build using **Product > Build** or `Cmd + B`.
 
-## Future Improvemnts
+## Future Improvements
   1. Batch processing of multiple images
   2. Support for different grayscale algorithms
   3. Benchmarking and optimization of image conversion
