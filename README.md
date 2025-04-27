@@ -24,3 +24,22 @@ SDK Design & Architecture:
 2. Select the `GrayscaleSDK` scheme.
 3. Choose a simulator or device.
 4. Build using **Product > Build** or `Cmd + B`.
+
+## Testing
+
+### Unit Tests
+
+To run unit tests:
+
+1. Open the project in Xcode.
+2. Select the `GrayscaleSDK` scheme.
+3. Use **Product > Test** or `Cmd + U`.
+
+### 📜 Automation Script
+
+Use the `build_and_test.sh` script to automate build & test:
+
+```bash
+chmod +x build_and_test.sh
+./build_and_test.sh
+
